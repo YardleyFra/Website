@@ -1,0 +1,123 @@
+/* Basic reset for styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* Example font */
+    background-color: #000;
+    /* Assuming a dark theme from the screenshot */
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    /* This centers the menu items horizontally */
+    padding: 20px;
+    /* Example padding */
+    background-color: #333;
+    /* Dark background for the navbar */
+}
+
+nav ul li {
+    padding: 0 20px;
+    /* Example padding between menu items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    /* Text color */
+    font-size: 16px;
+    /* Example font size */
+}
+
+.hero-content {
+    text-align: center;
+    /* Centering text */
+    padding: 50px;
+    /* Example padding around the content */
+    position: relative;
+    /* Position relative for absolute positioning of the image */
+}
+
+.hero-image {
+    position: absolute;
+    /* Absolute position */
+    right: 0;
+    /* Align to the right side */
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Center align */
+    max-width: 100%;
+    /* Make sure it doesn't overflow */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        position: static;
+        /* Reset positioning on smaller screens */
+        transform: none;
+        margin: 0 auto;
+        /* Center the image */
+        display: block;
+    }
+}
+
+.hero-content h1 {
+    margin-bottom: 20px;
+    /* Space below the headline */
+    font-size: 24px;
+    /* Example font size for the headline */
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    /* Center the buttons */
+    gap: 10px;
+    /* Space between buttons */
+}
+
+.button {
+    background-color: #555;
+    /* Button background */
+    color: white;
+    /* Button text color */
+    padding: 10px 20px;
+    /* Padding inside buttons */
+    text-decoration: none;
+    /* Remove underline from links */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s;
+    /* Smooth background color transition */
+}
+
+.button:hover {
+    background-color: #777;
+    /* Darker background on hover */
+}
+
+
+/* Example media query for responsiveness */
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        /* Stack the menu items vertically on small screens */
+    }
+    nav ul li {
+        padding: 10px 0;
+        /* Adjust padding for vertical layout */
+    }
+}
